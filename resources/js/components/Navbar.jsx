@@ -1,7 +1,6 @@
-// import Image from "next/image";
 import React from 'react';
-import logo from '/DEMFASNA/demfasna/public/assets/logo.png';
-// import Link from "next/link";
+import logo from '../../assets/img/logo.png';
+import { Link } from '@inertiajs/inertia-react';
 import { useState } from 'react';
 
 const Navbar = () => {
@@ -10,22 +9,12 @@ const Navbar = () => {
     <div className="bg-gradient-to-r from-red-400 to-red-600 border-gray-200 py-2.5">
       <div className="justify-between md:items-center md:flex">
         <div className="flex items-center justify-between md:block">
-          {/* <Link href="/"> */}
           <a className="flex items-center">
-            <img
-              src={logo}
-              width={40}
-              height={40}
-              objectFit="contain"
-              className="h-auto mx-3 sm:h-10"
-              alt="Logo"
-            />
+            <img src={logo} width={40} height={40} className="h-auto mx-3 sm:h-10" alt="Logo" />
             <span className="self-center text-xl font-semibold text-black whitespace-nowrap">
               DEMFASNA
             </span>
           </a>
-          {/* </Link> */}
-
           <div className="md:hidden">
             <button
               className="p-2 text-black rounded-md outline-none focus:border-white focus:border"
@@ -67,39 +56,44 @@ const Navbar = () => {
         >
           <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
             <li className="text-black ">
-              {/* <Link href="./"> */}
-              <a className="text-black hover:bg-[#fff] hover:text-black pt-5 pb-5 px-5 text-lg">
+              <Link
+                href="/"
+                className="text-black hover:bg-[#fff] hover:text-black pt-5 pb-5 px-5 text-lg"
+              >
                 Beranda
-              </a>
-              {/* </Link> */}
+              </Link>
             </li>
             <li className="text-black ">
-              {/* <Link href="./AboutUs"> */}
-              <a className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500">
+              <Link
+                href="/profile"
+                className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
+              >
                 Profil
-              </a>
-              {/* </Link> */}
+              </Link>
             </li>
             <li className="text-black ">
-              {/* <Link href="./contact"> */}
-              <a className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500">
+              <Link
+                href="/news"
+                className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
+              >
                 Berita
-              </a>
-              {/* </Link> */}
+              </Link>
             </li>
             <li className="text-black ">
-              {/* <Link href="./contact"> */}
-              <a className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500">
+              <Link
+                href="/gallery"
+                className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
+              >
                 Galeri
-              </a>
-              {/* </Link> */}
+              </Link>
             </li>
             <li className="text-black ">
-              {/* <Link href="./contact"> */}
-              <a className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500">
+              <Link
+                href="/contact"
+                className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
+              >
                 Hubungi
-              </a>
-              {/* </Link> */}
+              </Link>
             </li>
           </ul>
         </div>
