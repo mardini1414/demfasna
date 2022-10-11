@@ -8,4 +8,9 @@ export default defineConfig({
       '@': '/resources/js',
     },
   },
+  server: {
+    hmr: {
+      host: 'localhost',
+    },
+  },
 });
