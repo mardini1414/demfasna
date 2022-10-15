@@ -1,11 +1,12 @@
 import React from 'react';
+import heroImage from '../../assets/img/heroImage.png';
 
-const Beranda = () => {
+const HeroBeranda = () => {
   return (
-    <div>
-      <div className="relative flex flex-col-reverse items-center w-full h-full py-10 lg:flex-row lg:justify-between">
+    <div className="mx-20 my-8">
+      <div className="px-10 relative flex flex-col-reverse items-center w-full h-full py-10 bg-[#F4F2F3] rounded-[10px] lg:flex-row lg:justify-between">
         <div className="text-center lg:text-start">
-          <h1 className="text-3xl font-semibold lg:text-4xl">DEMFASNA</h1>
+          <h1 className="text-3xl font-bold lg:text-2xl">DEMFASNA</h1>
           <div className="px-5 lg:px-0">
             <h2> Dewan Eksekutif Mahasiswa Fakultas Syariah Indonesia</h2>
           </div>
@@ -16,10 +17,12 @@ const Beranda = () => {
             </p>
           </div>
         </div>
-        <div>{/* <Image src={heroImage} /> */}</div>
+        <div>
+          <img src={heroImage} alt="hero" />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Beranda;
+export default HeroBeranda;

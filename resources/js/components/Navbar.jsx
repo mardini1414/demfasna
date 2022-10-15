@@ -6,10 +6,10 @@ import { useState } from 'react';
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className="bg-gradient-to-r from-red-400 to-red-600 border-gray-200 py-2.5">
-      <div className="justify-between md:items-center md:flex">
+    <div className="bg-[#FBF9F7] border-gray-200 py-2.5">
+      <div className="justify-between md:items-center md:flex md:mx-20">
         <div className="flex items-center justify-between md:block">
-          <a className="flex items-center">
+          <a className="flex">
             <img src={logo} width={40} height={40} className="h-auto mx-3 sm:h-10" alt="Logo" />
             <span className="self-center text-xl font-semibold text-black whitespace-nowrap">
               DEMFASNA
@@ -54,11 +54,11 @@ const Navbar = () => {
             navbar ? 'block' : 'hidden'
           }`}
         >
-          <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+          <ul className="space-y-8 md:justify-end md:flex md:space-x-6 md:space-y-0 md:items-end">
             <li className="text-black ">
               <Link
                 href="/"
-                className="text-black hover:bg-[#fff] hover:text-black pt-5 pb-5 px-5 text-lg"
+                className="px-5 pt-5 pb-5 text-lg text-black hover:bg-red-500 hover:text-white"
               >
                 Beranda
               </Link>
@@ -68,15 +68,7 @@ const Navbar = () => {
                 href="/profile"
                 className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
               >
-                Profil
-              </Link>
-            </li>
-            <li className="text-black ">
-              <Link
-                href="/news"
-                className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
-              >
-                Berita
+                Tentang Kami
               </Link>
             </li>
             <li className="text-black ">
@@ -89,10 +81,10 @@ const Navbar = () => {
             </li>
             <li className="text-black ">
               <Link
-                href="/contact"
+                href="/news"
                 className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
               >
-                Hubungi
+                Berita
               </Link>
             </li>
           </ul>
