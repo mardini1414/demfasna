@@ -10,7 +10,7 @@
     @inertiaHead
 </head>
 
-<body class="bg-[#FBF9F7] container">
+<body class="bg-light">
     @inertia
 </body>
 

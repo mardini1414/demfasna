@@ -6,16 +6,16 @@ import { useState } from 'react';
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className="bg-[#FBF9F7] border-gray-200 py-2.5">
-      <div className="justify-between md:items-center md:flex md:mx-20">
-        <div className="flex items-center justify-between md:block">
+    <div className="bg-light border-gray-200 py-2.5">
+      <div className="justify-between lg:items-center lg:flex lg:mx-20">
+        <div className="flex items-center justify-between lg:block">
           <a className="flex">
             <img src={logo} width={40} height={40} className="h-auto mx-3 sm:h-10" alt="Logo" />
-            <span className="self-center text-xl font-semibold text-black whitespace-nowrap">
+            <span className="self-center text-xl font-semibold whitespace-nowrap text-primary">
               DEMFASNA
             </span>
           </a>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <button
               className="p-2 text-black rounded-md outline-none focus:border-white focus:border"
               onClick={() => setNavbar(!navbar)}
@@ -50,41 +50,34 @@ const Navbar = () => {
         </div>
 
         <div
-          className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+          className={`flex-1 justify-self-center pb-3 mt-8 lg:block lg:pb-0 lg:mt-0 ${
             navbar ? 'block' : 'hidden'
           }`}
         >
-          <ul className="space-y-8 md:justify-end md:flex md:space-x-6 md:space-y-0 md:items-end">
-            <li className="text-black ">
-              <Link
-                href="/"
-                className="px-5 pt-5 pb-5 text-lg text-black hover:bg-red-500 hover:text-white"
-              >
+          <ul className="space-y-8 lg:justify-end lg:flex lg:space-x-6 lg:space-y-0 lg:items-end">
+            <li>
+              <Link href="/" className="px-5 pt-5 pb-5 text-lg text-primary hover:underline">
                 Beranda
               </Link>
             </li>
-            <li className="text-black ">
-              <Link
-                href="/profile"
-                className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
-              >
+            <li>
+              <Link href="/profile" className="px-5 pt-5 pb-5 text-lg text-black hover:underline">
                 Tentang Kami
               </Link>
             </li>
-            <li className="text-black ">
-              <Link
-                href="/gallery"
-                className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
-              >
+            <li>
+              <Link href="/gallery" className="px-5 pt-5 pb-5 text-lg text-primary hover:underline">
                 Galeri
               </Link>
             </li>
-            <li className="text-black ">
-              <Link
-                href="/news"
-                className="px-5 pt-5 pb-5 text-lg text-black hover:text-white hover:bg-emerald-500"
-              >
+            <li>
+              <Link href="/news" className="px-5 pt-5 pb-5 text-lg text-primary hover:underline">
                 Berita
+              </Link>
+            </li>
+            <li>
+              <Link href="/news" className="px-5 pt-5 pb-5 text-lg text-primary hover:underline">
+                Kontak
               </Link>
             </li>
           </ul>

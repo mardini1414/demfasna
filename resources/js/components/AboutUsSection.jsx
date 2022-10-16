@@ -1,7 +1,7 @@
 import React from 'react';
 import TentangKami from '../../assets/img/Tentang Kami.png';
 
-const TentangKamiBeranda = () => {
+const AboutUsSection = () => {
   return (
     <div className="mx-20">
       <div className="flex justify-center mb-5">
@@ -47,4 +47,4 @@ const TentangKamiBeranda = () => {
   );
 };
 
-export default TentangKamiBeranda;
+export default AboutUsSection;
