@@ -18,7 +18,7 @@ const HeroSection = () => {
               Ipsum has been the industry's standard dummy text ever since the 1500s
             </p>
           </div>
-          <button className="px-10 py-1 text-sm rounded-sm bg-primary text-light">
+          <button className="px-10 py-2 text-sm rounded-sm bg-primary text-light">
             Hubungi Kami
           </button>
         </div>

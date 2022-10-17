@@ -7,7 +7,7 @@ const GallerySection = () => {
       <div className="flex justify-center mb-5">
         <p className="text-md tracking-wider text-[#1B2430] font-bold">Galeri</p>
       </div>
-      <div className="flex grid-cols-3 space-x-5">
+      <div className="flex space-x-5 md:grid-cols-3">
         <div>
           <img src={TentangKami} alt="Galery"></img>
         </div>
