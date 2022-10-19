@@ -3,18 +3,18 @@ import TentangKami from '../../assets/img/Tentang Kami.png';
 
 const NewsSection = () => {
   return (
-    <div className="mx-20">
-      <div className="flex justify-center mb-5">
-        <p className="text-md tracking-wider text-[#1B2430] font-bold">Berita</p>
-      </div>
-      <div className="flex flex-col items-center w-full text-black lg:flex-row lg:justify-between lg:items-start lg:space-x-12">
-        <div className="w-full h-full lg:w-full">
-          <img src={TentangKami} width={750} height={300} />
+    <div className="px-2 pt-10 md:px-20">
+      <h2 className="my-10 text-xl font-semibold tracking-wider text-center text-primary">
+        Berita
+      </h2>
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+        <div className="col-span-2">
+          <img src={TentangKami} className="w-full" />
           <div>
-            <h1 className="my-5 text-4xl font-bold">DEMFASNA</h1>
+            <h1 className="my-5 text-4xl font-bold text-primary">DEMFASNA</h1>
           </div>
           <div className="my-5">
-            <p>
+            <p className="text-primary/80">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
               has been the industry's standard dummy text ever since the 1500s, when an unknown
               printer took a galley of type and scrambled it to make a type specimen book. It has
@@ -22,32 +22,38 @@ const NewsSection = () => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col space-y-7 lg:w-3/6">
+        <div className="grid gap-4">
           <div className="grid grid-cols-2 space-x-3">
             <div>
-              <img src={TentangKami} className="w-56 h-44" />
+              <img src={TentangKami} className="object-cover rounded aspect-square" />
             </div>
             <div>
-              <p>10 Desember 2022</p>
-              <p className="text-xl font-semibold">Lorem Ipsum is simply dummy text of the</p>
+              <span className="text-primary/80">10 Desember 2022</span>
+              <h3 className="text-xl font-semibold text-primary">
+                Lorem Ipsum is simply dummy text of the
+              </h3>
             </div>
           </div>
           <div className="grid grid-cols-2 space-x-3">
             <div>
-              <img src={TentangKami} className="w-56 h-44" />
+              <img src={TentangKami} className="object-cover rounded aspect-square" />
             </div>
             <div>
-              <p>10 Desember 2022</p>
-              <p className="text-xl font-semibold">Lorem Ipsum is simply dummy text of the</p>
+              <span className="text-primary/80">10 Desember 2022</span>
+              <h3 className="text-xl font-semibold text-primary">
+                Lorem Ipsum is simply dummy text of the
+              </h3>
             </div>
           </div>
           <div className="grid grid-cols-2 space-x-3">
             <div>
-              <img src={TentangKami} className="w-56 h-44" />
+              <img src={TentangKami} className="object-cover rounded aspect-square" />
             </div>
             <div>
-              <p>10 Desember 2022</p>
-              <p className="text-xl font-semibold">Lorem Ipsum is simply dummy text of the</p>
+              <span className="text-primary/80">10 Desember 2022</span>
+              <h3 className="text-xl font-semibold text-primary">
+                Lorem Ipsum is simply dummy text of the
+              </h3>
             </div>
           </div>
         </div>

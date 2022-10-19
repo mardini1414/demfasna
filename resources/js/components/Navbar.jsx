@@ -6,7 +6,7 @@ import { useState } from 'react';
 const Navbar = () => {
   const [navbar, setNavbar] = useState(false);
   return (
-    <div className="bg-light border-gray-200 py-2.5">
+    <div className="py-2 border-gray-200 bg-light">
       <div className="justify-between lg:items-center lg:flex lg:mx-20">
         <div className="flex items-center justify-between lg:block">
           <a className="flex">
