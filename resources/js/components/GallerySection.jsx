@@ -17,6 +17,15 @@ const GallerySection = () => {
         <div className="w-full">
           <img src={TentangKami} alt="Galery" className="w-full"></img>
         </div>
+        <div className="w-full">
+          <img src={TentangKami} alt="Galery" className="w-full"></img>
+        </div>
+        <div className="w-full">
+          <img src={TentangKami} alt="Galery" className="w-full"></img>
+        </div>
+        <div className="w-full">
+          <img src={TentangKami} alt="Galery" className="w-full"></img>
+        </div>
       </div>
     </div>
   );
