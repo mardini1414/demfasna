@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\dashboard;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class ContactController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Handle the incoming request.
@@ -14,6 +15,6 @@ class ContactController extends Controller
      */
     public function __invoke(Request $request)
     {
-        return inertia('contact/index');
+        return inertia('dashboard/index');
     }
 }

@@ -1,12 +1,11 @@
 <?php
 
+use App\Http\Controllers\dashboard\DashboardController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\NewsController;
-use App\Http\Controllers\GalleryController;
-use App\Http\Controllers\ContactController;
-use App\Http\Controllers\admin\DashboardController;
+use App\Http\Controllers\dashboard\NewsDashboardController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,8 +20,12 @@ use App\Http\Controllers\admin\DashboardController;
 Route::get('/', HomeController::class);
 Route::get('/profile', ProfileController::class);
 Route::get('/news', [NewsController::class, 'index']);
-Route::get('/news/{id}', [NewsController::class, 'show']);
-Route::get('/gallery', GalleryController::class);
-Route::get('/contact', ContactController::class);
+Route::get('/news/{slug}', [NewsController::class, 'show']);
 
-Route::get('/admin/dashboard', DashboardController::class);
+Route::get('/dashboard', DashboardController::class);
+Route::get('/dashboard/news', [NewsDashboardController::class, 'index']);
+Route::post('/dashboard/news', [NewsDashboardController::class, 'store']);
+Route::get('/dashboard/news/create', [NewsDashboardController::class, 'create']);
+Route::get('/dashboard/news/{slug}', [NewsDashboardController::class, 'show']);
+Route::put('/dashboard/news/{slug}', [NewsDashboardController::class, 'update']);
+Route::delete('/dashboard/news/{slug}', [NewsDashboardController::class, 'destroy']);
