@@ -1,10 +1,10 @@
 import React from 'react';
-import TentangKami from '../../assets/img/Tentang Kami.png';
+import TentangKami from '../../assets/img/Tentang Kami.webp';
 
 const NewsSection = () => {
   return (
-    <div className="px-2 pt-10 md:px-20">
-      <h2 className="my-10 text-xl font-semibold tracking-wider text-center text-primary">
+    <div className="px-5 pt-10 md:px-10 lg:my-10 lg:px-20">
+      <h2 className="my-10 text-2xl font-semibold tracking-wider text-center text-primary">
         Berita
       </h2>
       <div className="grid gap-4 lg:grid-cols-3">
