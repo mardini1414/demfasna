@@ -44,4 +44,10 @@ class NewsDashboardController extends Controller
         $this->newsService->update($request);
         return redirect('/dashboard/news')->with('message', 'news successfully edited');
     }
+
+    public function destroy($slug)
+    {
+        $this->newsService->destroy($slug);
+        return redirect('/dashboard/news')->with('message', 'news successfully deleted');
+    }
 }

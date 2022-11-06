@@ -3,6 +3,7 @@
 namespace App\Http\Services;
 
 use App\Models\News;
+use Illuminate\Support\Facades\Storage;
 
 class NewsService
 {
@@ -20,5 +21,12 @@ class NewsService
 
     public function update($request)
     {
+    }
+
+    public function destroy($slug)
+    {
+        $news = News::where('slug', $slug)->first();
+        Storage::delete($news['image']);
+        News::where('slug', $slug)->delete();
     }
 }

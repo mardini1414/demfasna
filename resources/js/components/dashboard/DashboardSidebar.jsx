@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link } from '@inertiajs/inertia-react';
+import { usePage } from '@inertiajs/inertia-react';
 
 const DashboardSidebar = () => {
+  const { url } = usePage();
   return (
     <div className="fixed left-0 z-10 flex flex-col h-full text-white transition-all duration-300 bg-blue-900 border-none top-14 w-14 hover:w-64 md:w-64 dark:bg-gray-900 sidebar">
       <div className="flex flex-col justify-between flex-grow overflow-x-hidden overflow-y-auto">
@@ -14,7 +16,9 @@ const DashboardSidebar = () => {
           <li>
             <Link
               href="/dashboard"
-              className="relative flex flex-row items-center pr-6 border-l-4 border-transparent h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 hover:border-blue-500 dark:hover:border-gray-800"
+              className={`relative flex flex-row items-center pr-6 border-l-4 border-transparent ${
+                url === '/dashboard' ? 'text-white' : 'text-white/50'
+              } h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 hover:text-white-800 hover:border-blue-500 dark:hover:border-gray-800`}
             >
               <i className="fa-solid fa-house"></i>
               <span className="ml-2 text-sm tracking-wide truncate">Dashboard</span>
@@ -23,7 +27,9 @@ const DashboardSidebar = () => {
           <li>
             <Link
               href="/dashboard/news"
-              className="relative flex flex-row items-center pr-6 border-l-4 border-transparent h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 text-white-600 hover:text-white-800 hover:border-blue-500 dark:hover:border-gray-800"
+              className={`relative flex flex-row items-center pr-6 border-l-4 border-transparent ${
+                url.startsWith('/dashboard/news') ? 'text-white' : 'text-white/50'
+              } h-11 focus:outline-none hover:bg-blue-800 dark:hover:bg-gray-600 hover:text-white-800 hover:border-blue-500 dark:hover:border-gray-800`}
             >
               <i className="fa-solid fa-newspaper"></i>
               <span className="ml-2 text-sm tracking-wide truncate">News</span>

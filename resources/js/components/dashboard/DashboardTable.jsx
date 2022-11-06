@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from '@inertiajs/inertia-react';
 import moment from 'moment/moment';
+import { Lightbox } from 'react-modal-image';
+import { useForm } from '@inertiajs/inertia-react';
 
 const DashboardTable = ({ data, to, total }) => {
+  const { delete: destroy } = useForm({ _method: 'delete' });
+  const [open, setOpen] = useState(false);
+  const [image, setImage] = useState('');
+
+  const openModal = url => {
+    setOpen(true);
+    setImage('/storage/' + url);
+  };
+
+  const closeModal = () => {
+    setOpen(false);
+    setImage('');
+  };
+
   return (
     <div className="container px-4 mt-4">
       <Link href="/dashboard/news/create" className="block mb-4">
@@ -27,13 +43,14 @@ const DashboardTable = ({ data, to, total }) => {
                     key={news.id}
                   >
                     <td className="px-4 py-3">
-                      <a href={'/storage/' + news.image} target="_blank">
-                        <i className="text-lg fa-solid fa-image"></i>
-                      </a>
+                      <i
+                        className="text-lg cursor-pointer fa-solid fa-image"
+                        onClick={() => openModal(news.image)}
+                      ></i>
                     </td>
                     <td className="px-4 py-3 text-sm">{news.title}</td>
                     <td className="px-4 py-3 text-sm">
-                      {moment(news.created_at).format('dddd, MMMM Do YYYY, h:mm:ss a')}
+                      {moment(news.created_at).format('dddd, MM YYYY, h:mm:ss a')}
                     </td>
                     <td className="px-4 py-3">
                       <button className="px-2 py-1 mr-2 bg-green-800 rounded">
@@ -42,7 +59,10 @@ const DashboardTable = ({ data, to, total }) => {
                       <button className="px-2 py-1 mr-2 bg-blue-800 rounded">
                         <i className="text-white fa-solid fa-pencil"></i>
                       </button>
-                      <button className="px-2 py-1 bg-red-800 rounded">
+                      <button
+                        className="px-2 py-1 bg-red-800 rounded"
+                        onClick={() => destroy('/dashboard/news/' + news.slug)}
+                      >
                         <i className="text-white fa-solid fa-trash"></i>
                       </button>
                     </td>
@@ -107,6 +127,16 @@ const DashboardTable = ({ data, to, total }) => {
           </span>
         </div>
       </div>
+      {open && (
+        <Lightbox
+          large={image}
+          medium={image}
+          small={image}
+          onClose={closeModal}
+          hideDownload={true}
+          hideZoom={true}
+        />
+      )}
     </div>
   );
 };
