@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\dashboard;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 use App\Http\Services\NewsService;
 use App\Http\Requests\AddNewsRequest;
 use App\Http\Requests\EditNewsRequest;
@@ -35,13 +34,15 @@ class NewsDashboardController extends Controller
         return inertia('dashboard/news/addNews');
     }
 
-    public function show()
+    public function show($slug)
     {
+        $news = $this->newsService->show($slug);
+        return inertia('dashboard/news/editNews', compact('news'));
     }
 
-    public function update(EditNewsRequest $request)
+    public function update(EditNewsRequest $request, $slug)
     {
-        $this->newsService->update($request);
+        $this->newsService->update($request, $slug);
         return redirect('/dashboard/news')->with('message', 'news successfully edited');
     }
 

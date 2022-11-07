@@ -56,9 +56,12 @@ const DashboardTable = ({ data, to, total }) => {
                       <button className="px-2 py-1 mr-2 bg-green-800 rounded">
                         <i className="text-white fa-solid fa-eye"></i>
                       </button>
-                      <button className="px-2 py-1 mr-2 bg-blue-800 rounded">
+                      <Link
+                        href={'/dashboard/news/' + news.slug}
+                        className="px-2 py-1 mr-2 bg-blue-800 rounded"
+                      >
                         <i className="text-white fa-solid fa-pencil"></i>
-                      </button>
+                      </Link>
                       <button
                         className="px-2 py-1 bg-red-800 rounded"
                         onClick={() => destroy('/dashboard/news/' + news.slug)}
