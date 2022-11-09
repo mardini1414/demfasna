@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from '@inertiajs/inertia-react';
 
 const DashboardNavbar = () => {
   return (
@@ -13,7 +14,12 @@ const DashboardNavbar = () => {
       <div className="flex items-center justify-end bg-blue-800 h-14 dark:bg-gray-800 header-right">
         <ul className="flex items-center">
           <li>
-            <a href="#" className="flex items-center mr-4 hover:text-blue-100">
+            <Link
+              href="/logout"
+              className="flex items-center mr-4 cursor-pointer hover:text-blue-100"
+              method="post"
+              as="button"
+            >
               <span className="inline-flex mr-1">
                 <svg
                   className="w-5 h-5"
@@ -31,7 +37,7 @@ const DashboardNavbar = () => {
                 </svg>
               </span>
               Logout
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
