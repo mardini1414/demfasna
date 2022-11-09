@@ -19,8 +19,23 @@ class NewsService
         News::create($validated);
     }
 
-    public function update($request)
+    public function show($slug)
     {
+        return News::where('slug', $slug)->first();
+    }
+
+    public function update($request, $slug)
+    {
+        $validated = $request->validated();
+
+        if ($request->file('image')) {
+            $validated['image'] = $request->file('image')->store('news-image');
+            News::where('slug', $slug)->update($validated);
+            Storage::delete($request->oldImage);
+        } else {
+            $validated['image'] = $request->oldImage;
+            News::where('slug', $slug)->update($validated);
+        }
     }
 
     public function destroy($slug)
