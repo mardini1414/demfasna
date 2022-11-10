@@ -2,7 +2,7 @@ import React from 'react';
 import Logo from '../../../assets/img/logo.png';
 import { useForm, usePage } from '@inertiajs/inertia-react';
 
-const login = () => {
+const Login = () => {
   const { setData, post, processing } = useForm({ email: '', password: '', remember: false });
   const { flash } = usePage().props;
 
@@ -64,4 +64,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;
