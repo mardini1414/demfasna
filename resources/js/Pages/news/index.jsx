@@ -16,11 +16,12 @@ const News = props => {
         {data.map(news => {
           return (
             <Link
+              as="div"
               href={'/news/' + news.slug}
               key={news.id}
               className="flex flex-col mb-12 md:flex-row"
             >
-              <div>
+              <div className="md:w-[400px]">
                 <img
                   src={'/storage/' + news.image}
                   alt={news.title}
@@ -28,8 +29,8 @@ const News = props => {
                   className="block object-cover rounded aspect-video"
                 />
               </div>
-              <div className="mt-4 md:mt-0 md:ml-4">
-                <h3 className="font-bold text-2xl truncate text-primary max-w-[400px] lg:max-w-[500px]">
+              <div className="md:min-w-[400px] mt-4 md:mt-0 md:ml-4">
+                <h3 className="font-bold text-2xl truncate text-primary max-w-[400px] lg:max-w-[500px] text-start">
                   {news.title}
                 </h3>
                 <div className="flex my-2 text-xs text-primary/80">
@@ -46,7 +47,7 @@ const News = props => {
                 <ReactMarkdown
                   children={truncate(news.body, 200)}
                   rehypePlugins={[rehypeRaw]}
-                  className="max-w-[400px] lg:max-w-[500px] text-primary/80 leading-relaxed"
+                  className="max-w-[400px] lg:max-w-[500px] text-primary/80 leading-relaxed text-start"
                 />
               </div>
             </Link>
