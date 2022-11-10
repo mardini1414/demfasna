@@ -19,7 +19,7 @@ class NewsDashboardController extends Controller
 
     public function index()
     {
-        $data = $this->newsService->getAll();
+        $data = $this->newsService->getAll(10);
         return inertia('dashboard/news/index', $data);
     }
 

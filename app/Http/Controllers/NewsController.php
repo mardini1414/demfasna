@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Services\NewsService;
 
 class NewsController extends Controller
 {
@@ -12,13 +12,23 @@ class NewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+
+    private $newsService;
+
+    public function __construct()
     {
-        return inertia('news/index');
+        $this->newsService = new NewsService();
     }
 
-    public function show()
+    public function index()
     {
-        return inertia('news/Detail');
+        $data = $this->newsService->getAll(6);
+        return inertia('news/index', $data);
+    }
+
+    public function show($slug)
+    {
+        $data = $this->newsService->show($slug);
+        return inertia('news/detail', compact('data'));
     }
 }

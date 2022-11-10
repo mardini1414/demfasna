@@ -7,9 +7,9 @@ use Illuminate\Support\Facades\Storage;
 
 class NewsService
 {
-    public function getAll()
+    public function getAll($perpage)
     {
-        return News::orderBy('id', 'desc')->paginate();
+        return News::orderBy('id', 'desc')->paginate($perpage);
     }
 
     public function store($request)

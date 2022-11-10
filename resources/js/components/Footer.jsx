@@ -4,9 +4,9 @@ import logo from '../../assets/img/logo.png';
 const Footer = () => {
   return (
     <footer className="py-5 bg-primary">
-      <div className="container px-5 sm:px-5 md:px-10 lg:px-20 mx-auto">
-        <div className="md:flex md:justify-between">
-          <div className="mb-6 md:mb-0 ">
+      <div className="container px-5 mx-auto sm:px-5 md:px-10 lg:px-20">
+        <div className="px-6 md:flex md:justify-between">
+          <div className="mb-6 -ml-3 md:mb-0">
             <a href="https://flowbite.com/" className="flex items-center">
               <img src={logo} width={40} height={40} className="h-auto sm:h-10" alt="Logo" />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-light">
@@ -19,12 +19,18 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold uppercase text-light">Follow us</h2>
               <ul className="text-light">
                 <li className="mb-4">
-                  <a href="https://www.instagram.com/demfasna/" className="hover:underline ">
+                  <a
+                    href="https://www.instagram.com/demfasna/"
+                    className="font-light hover:underline text-light/90"
+                  >
                     Instagran
                   </a>
                 </li>
                 <li>
-                  <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">
+                  <a
+                    href="https://discord.gg/4eeurUVvTy"
+                    className="font-light hover:underline text-light/90"
+                  >
                     Youtube
                   </a>
                 </li>
@@ -34,12 +40,12 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold uppercase text-light">Legal</h2>
               <ul className="text-light">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="font-light hover:underline text-light/90">
                     Privacy Policy
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <a href="#" className="font-light hover:underline text-light/90">
                     Terms &amp; Conditions
                   </a>
                 </li>
