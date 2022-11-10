@@ -23,6 +23,7 @@ Route::get('/', HomeController::class);
 Route::get('/profile', ProfileController::class);
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/news/{slug}', [NewsController::class, 'show']);
+Route::get('/contact', [NewsController::class, 'index']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', DashboardController::class);
