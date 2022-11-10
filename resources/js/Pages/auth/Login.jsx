@@ -40,7 +40,7 @@ const login = () => {
             className="p-2 border border-gray-300 rounded outline-none focus:border-2 focus:border-blue-400"
             onChange={e => setData('password', e.target.value)}
           />
-          <div className="flex items-center">
+          <div className="flex items-center mb-1">
             <input
               type="checkbox"
               id="remember"
