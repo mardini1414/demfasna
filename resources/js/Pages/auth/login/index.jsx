@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../../assets/img/logo.png';
+import Logo from '../../../../assets/img/logo.png';
 import { useForm, usePage } from '@inertiajs/inertia-react';
 
 const Login = () => {

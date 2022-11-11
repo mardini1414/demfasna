@@ -84,7 +84,7 @@ const Navbar = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/news" className="px-5 pt-5 pb-5 text-lg text-primary hover:underline">
+                <Link href="/contact" className="px-5 pt-5 pb-5 text-lg text-primary hover:underline">
                   Kontak
                 </Link>
               </li>
