@@ -19,11 +19,13 @@ use App\Http\Controllers\dashboard\NewsDashboardController;
 |
 */
 
-Route::get('/', HomeController::class);
-Route::get('/profile', ProfileController::class);
+Route::get('/', fn () => inertia('home/index'));
+Route::get('/profile', fn () => inertia('profile/index'));
+Route::get('/contact', fn () => inertia('contact/index'));
 Route::get('/news', [NewsController::class, 'index']);
 Route::get('/news/{slug}', [NewsController::class, 'show']);
-Route::get('/contact', [NewsController::class, 'index']);
+Route::get('/privacy-policy', fn () => inertia('privacyPolicy/index'));
+Route::get('/terms-conditions', fn () => inertia('termsConditions/index'));
 
 Route::middleware('auth')->group(function () {
     Route::get('/dashboard', DashboardController::class);

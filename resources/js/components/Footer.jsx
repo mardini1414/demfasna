@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../assets/img/logo.png';
+import { Link } from '@inertiajs/inertia-react';
 
 const Footer = () => {
   return (
@@ -40,14 +41,17 @@ const Footer = () => {
               <h2 className="mb-6 text-sm font-semibold uppercase text-light">Legal</h2>
               <ul className="text-light">
                 <li className="mb-4">
-                  <a href="#" className="font-light hover:underline text-light/90">
+                  <Link href="/privacy-policy" className="font-light hover:underline text-light/90">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="font-light hover:underline text-light/90">
+                  <Link
+                    href="/terms-conditions"
+                    className="font-light hover:underline text-light/90"
+                  >
                     Terms &amp; Conditions
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
