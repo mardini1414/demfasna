@@ -1,7 +1,8 @@
 import React from 'react';
 import Layout from '../../components/layouts/Layout';
 import Gambar1 from '../../../assets/img/logo with bg.webp';
-import GambarWilayah from '../../../assets/img/Gambar Wilayah.webp';
+// import GambarWilayah from '../../../assets/img/Gambar Wilayah.webp';
+import GambarWilayah from '../../../assets/img/indonesia.webp';
 
 
 const Profile = () => {
@@ -43,6 +44,36 @@ const Profile = () => {
         </div>
         <div className='my-10'>
         <img src={GambarWilayah} alt="Gambar 1" className='mx-auto w-full' />
+        </div>
+        <div className='flex grid grid-cols-1 gap-8  lg:grid-cols-3'>
+          <div className='py-5 px-3 text-center bg-primary/30  rounded-lg'>
+            <h1 className='font-bold text-2xl'>WILAYAH 1</h1>
+            <p>DKI Jakarta, Jawa Barat Banten</p>
+          </div>
+          <div className='py-5 px-3 text-center bg-primary/30 rounded-lg'>
+            <h1 className='text-2xl font-bold'>WILAYAH 2</h1>
+            <p>Jawa Tengah, D.I.Y</p>
+          </div>
+          <div className='py-5 px-3 text-center bg-primary/30 rounded-lg'>
+            <h1 className='font-bold text-2xl'>WILAYAH 3</h1>
+            <p>Jawa Timur, Madura, NTB</p>
+          </div>
+          <div className='py-5 px-3 text-center bg-primary/30 rounded-lg'>
+            <h1 className='font-bold text-2xl'>WILAYAH 4</h1>
+            <p>Aceh, Sumatera Utara, Palembang, Jambi</p>
+          </div> 
+          <div className='py-5 px-3 text-center bg-primary/30 rounded-lg'>
+            <h1 className='font-bold text-2xl'>WILAYAH 5</h1>
+            <p>Sumatera Barat, Lampung, Riau, Kep. Riau, Bengkulu</p>
+          </div> 
+          <div className='py-5 px-3 text-center bg-primary/30 rounded-lg'>
+            <h1 className='font-bold text-2xl'>WILAYAH 6</h1>
+            <p>Sulawesi, Gorontalo, Maluku, Papua</p>
+          </div> 
+          <div className='py-5 px-3 text-center bg-primary/30 rounded-lg'>
+            <h1 className='font-bold text-2xl'>WILAYAH 7</h1>
+            <p>Kalimantan</p>
+          </div> 
         </div>
       </div>
     </Layout>
