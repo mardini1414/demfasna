@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/inertia-react';
 import React from 'react';
 import Layout from '../../components/layouts/Layout';
 
@@ -53,7 +54,7 @@ const Contact = () => {
                       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                             id="exampleInput124"
                             aria-describedby="emailHelp124"
-                            placeholder="Emal"
+                            placeholder="Email"
                   />
                 </div>
               </div>
@@ -130,18 +131,20 @@ const Contact = () => {
             </form>
 
           </div>
-          <div>
-            <div>
-            <h1>Hubungi Kami</h1>
-            <p>demfasna@gmail.com</p>
-            <p>Jakarta</p>
+          <div className='space-y-3'>
+            <div className='space-y-3'>
+            <h1 className='text-2xl text-bold'>Hubungi Kami</h1>
+            <p className='text-primary/80 text-xl text-semibold'>demfasna@gmail.com</p>
+            <p className='text-primary/80 text-xl text-semibold'>Jakarta, Indonesia</p>
             </div>
-            <div>
-              <h1>Follow On:</h1>
+            <div className='space-y-3'>
+              <h1 className='text-primary/80 text-xl text-semibold'>Follow On:</h1>
               <div className='space-x-4'>
-                <i className="fa-brands fa-instagram"></i>
-                <i className="fa-brands fa-square-youtube"></i>
-              </div>
+                <i className="fab fa-instagram border-2 hover:border-0 border-pink-500 bg-gradient-to-b text-3xl hover:from-indigo-600 hover:via-pink-600 hover:to-yellow-500 min-w-wull hover:text-white bg-white text-pink-600 p-2  transform hover:-translate-y-3 rounded-full duration-500"></i>
+                <Link href='https://www.instagram.com/demfasna/'>
+                <i className="fa-brands fa-youtube text-3xl bg-white transform hover:-translate-y-3  border-2 p-2 rounded-full duration-500 text-red-500 border-red-500 hover:bg-red-500 hover:text-white"></i>
+                </Link>
+                </div>
             </div>            
           </div>
         </div>

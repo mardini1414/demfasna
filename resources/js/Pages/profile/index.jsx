@@ -27,7 +27,7 @@ const Profile = () => {
         <div className="grid items-center grid-cols-1 gap-4 my-10 text-center lg:grid-cols-2">
           <div className="w-full">
             <div className="mx-auto w-[160px] h-[160px] rounded-full bg-secondary text-6xl flex justify-center items-center">
-              <i className="items-center fa-sharp fa-solid fa-location-arrow text-primary hover:text-primary/80"></i>
+              <i className="items-center fa-sharp fa-solid fa-location-arrow text-primary hover:text-secondary transform hover:-translate-y-3  border-2 p-2 rounded-full duration-500 text-primary border-primary hover:bg-primary p-12"></i>
             </div>
           </div>
           <div className="flex flex-col space-y-1 lg:text-start">
@@ -41,7 +41,7 @@ const Profile = () => {
         <div className="grid items-center grid-cols-1 gap-4 my-10 text-center lg:grid-cols-2">
           <div className="w-full">
             <div className="mx-auto w-[160px] h-[160px] rounded-full bg-secondary text-6xl flex justify-center items-center">
-              <i className="fa-solid fa-check-to-slot text-primary hover:text-primary/80"></i>
+              <i className="fa-solid fa-check-to-slot text-primary text-primary hover:text-secondary transform hover:-translate-y-3  border-2 p-2 rounded-full duration-500 text-primary border-primary hover:bg-primary p-12"></i>
             </div>
           </div>
           <div className="flex flex-col space-y-1 lg:text-start">
@@ -56,31 +56,31 @@ const Profile = () => {
           <img src={GambarWilayah} alt="Gambar 1" className="w-full mx-auto" />
         </div>
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
-          <div className="px-3 py-5 text-center rounded-lg bg-secondary">
+          <div className="px-3 py-5 text-center bg-secondary hover:text-secondary transform hover:-translate-y-3 hover:rounded-lg duration-500 text-primary border-primary hover:bg-primary">
             <h1 className="text-2xl font-bold">WILAYAH 1</h1>
             <p>DKI Jakarta, Jawa Barat Banten</p>
           </div>
-          <div className="px-3 py-5 text-center rounded-lg bg-secondary">
+          <div className="px-3 py-5 text-center bg-secondary hover:text-secondary transform hover:-translate-y-3 hover:rounded-lg duration-500 text-primary border-primary hover:bg-primary">
             <h1 className="text-2xl font-bold">WILAYAH 2</h1>
             <p>Jawa Tengah, D.I.Y</p>
           </div>
-          <div className="px-3 py-5 text-center rounded-lg bg-secondary">
+          <div className="px-3 py-5 text-center bg-secondary hover:text-secondary transform hover:-translate-y-3 hover:rounded-lg duration-500 text-primary border-primary hover:bg-primary">
             <h1 className="text-2xl font-bold">WILAYAH 3</h1>
             <p>Jawa Timur, Madura, NTB</p>
           </div>
-          <div className="px-3 py-5 text-center rounded-lg bg-secondary">
+          <div className="px-3 py-5 text-center bg-secondary hover:text-secondary transform hover:-translate-y-3 hover:rounded-lg duration-500 text-primary border-primary hover:bg-primary">
             <h1 className="text-2xl font-bold">WILAYAH 4</h1>
             <p>Aceh, Sumatera Utara, Palembang, Jambi</p>
           </div>
-          <div className="px-3 py-5 text-center rounded-lg bg-secondary">
+          <div className="px-3 py-5 text-center bg-secondary hover:text-secondary transform hover:-translate-y-3 hover:rounded-lg duration-500 text-primary border-primary hover:bg-primary">
             <h1 className="text-2xl font-bold">WILAYAH 5</h1>
             <p>Sumatera Barat, Lampung, Riau, Kep. Riau, Bengkulu</p>
           </div>
-          <div className="px-3 py-5 text-center rounded-lg bg-secondary">
+          <div className="px-3 py-5 text-center bg-secondary hover:text-secondary transform hover:-translate-y-3 hover:rounded-lg duration-500 text-primary border-primary hover:bg-primary">
             <h1 className="text-2xl font-bold">WILAYAH 6</h1>
             <p>Sulawesi, Gorontalo, Maluku, Papua</p>
           </div>
-          <div className="px-3 py-5 text-center rounded-lg bg-secondary">
+          <div className="px-3 py-5 text-center bg-secondary hover:text-secondary transform hover:-translate-y-3 hover:rounded-lg duration-500 text-primary border-primary hover:bg-primary">
             <h1 className="text-2xl font-bold">WILAYAH 7</h1>
             <p>Kalimantan</p>
           </div>
