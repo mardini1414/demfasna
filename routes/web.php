@@ -19,7 +19,7 @@ use App\Http\Controllers\dashboard\NewsDashboardController;
 |
 */
 
-Route::get('/', fn () => inertia('home/index'));
+Route::get('/', HomeController::class);
 Route::get('/profile', fn () => inertia('profile/index'));
 Route::get('/contact', fn () => inertia('contact/index'));
 Route::get('/news', [NewsController::class, 'index']);

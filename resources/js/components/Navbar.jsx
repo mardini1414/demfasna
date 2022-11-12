@@ -10,12 +10,12 @@ const Navbar = () => {
       <div className="container mx-auto">
         <div className="justify-between lg:items-center lg:flex lg:mx-20">
           <div className="flex items-center justify-between lg:block">
-            <a className="flex">
+            <Link href="/" className="flex">
               <img src={logo} width={40} height={40} className="h-auto mx-3 sm:h-10" alt="Logo" />
               <span className="self-center text-xl font-semibold whitespace-nowrap text-primary">
                 DEMFASNA
               </span>
-            </a>
+            </Link>
             <div className="lg:hidden">
               <button
                 className="p-2 text-black rounded-md outline-none focus:border-white focus:border"

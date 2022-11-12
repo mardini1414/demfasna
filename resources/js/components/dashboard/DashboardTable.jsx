@@ -58,9 +58,12 @@ const DashboardTable = props => {
                     </td>
                     <td className="px-4 py-3 text-sm">{toLocalDate(news.created_at)}</td>
                     <td className="px-4 py-3">
-                      <button className="px-2 py-1 mr-2 bg-green-800 rounded">
+                      <Link
+                        href={'/news/' + news.slug}
+                        className="px-2 py-1 mr-2 bg-green-800 rounded"
+                      >
                         <i className="text-white fa-solid fa-eye"></i>
-                      </button>
+                      </Link>
                       <Link
                         href={'/dashboard/news/' + news.slug}
                         className="px-2 py-1 mr-2 bg-blue-800 rounded"

@@ -5,13 +5,13 @@ import AboutUsSection from '../../components/AboutUsSection';
 import GallerySection from '../../components/GallerySection';
 import NewsSection from '../../components/NewsSection';
 
-const Home = () => {
+const Home = ({ data }) => {
   return (
     <Layout>
       <HeroSection />
       <AboutUsSection />
       <GallerySection />
-      <NewsSection />
+      <NewsSection data={data} />
     </Layout>
   );
 };

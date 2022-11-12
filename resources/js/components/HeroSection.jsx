@@ -1,3 +1,4 @@
+import { Link } from '@inertiajs/inertia-react';
 import React from 'react';
 import heroImage from '../../assets/img/heroImage.webp';
 
@@ -18,9 +19,9 @@ const HeroSection = () => {
               Syari'ah Se-Indonesia
             </p>
           </div>
-          <button className="px-10 py-2 text-sm rounded-sm bg-primary text-light">
+          <Link href="/contact" className="px-10 py-2 text-sm rounded-sm bg-primary text-light">
             Hubungi Kami
-          </button>
+          </Link>
         </div>
         <div className="w-2/3">
           <img src={heroImage} className="w-full" alt="hero" />
