@@ -7,8 +7,8 @@ import Pagination from '../Pagination';
 import toLocalDate from '../../helper/toLocalDate';
 
 const DashboardTable = props => {
-  const { data, to, total, prev_page_url, next_page_url, from, last_page } = props;
-  const { delete: destroy } = useForm({ _method: 'delete' });
+  const { data, to, total, prev_page_url, next_page_url, current_page, last_page } = props;
+  const { post } = useForm({ _method: 'delete' });
   const [open, setOpen] = useState(false);
   const [image, setImage] = useState('');
 
@@ -72,7 +72,7 @@ const DashboardTable = props => {
                       </Link>
                       <button
                         className="px-2 py-1 bg-red-800 rounded"
-                        onClick={() => destroy('/dashboard/news/' + news.slug)}
+                        onClick={() => post('/dashboard/news/' + news.slug)}
                       >
                         <i className="text-white fa-solid fa-trash"></i>
                       </button>
@@ -91,7 +91,7 @@ const DashboardTable = props => {
             <Pagination
               prevPage={prev_page_url}
               nextPage={next_page_url}
-              from={from}
+              currentPage={current_page}
               lastPage={last_page}
             />
           </span>
