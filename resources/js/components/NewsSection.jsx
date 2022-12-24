@@ -13,12 +13,10 @@ const NewsSection = ({ data }) => {
       </h2>
       {data && (
         <div className="grid gap-4 lg:grid-cols-3">
-          <Link as="div" href={'/news/' + data[0]?.slug} className="cursor-pointer lg:col-span-2">
-            <img
-              src={'/storage/' + data[0]?.image}
-              alt={data[0]?.title}
-              className={`${data ? '' : 'hidden'} w-full`}
-            />
+          <Link href={'/news/' + data[0]?.slug} className="cursor-pointer lg:col-span-2">
+            {data[0]?.image && (
+              <img src={'/storage/' + data[0]?.image} alt={data[0]?.title} className="w-full" />
+            )}
             <h2 className="mt-4 mb-2 text-xl font-semibold text-primary">
               {truncate(data[0]?.title, 100)}
             </h2>
