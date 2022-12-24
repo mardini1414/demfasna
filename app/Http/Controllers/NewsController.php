@@ -29,6 +29,6 @@ class NewsController extends Controller
     public function show($slug)
     {
         $data = $this->newsService->show($slug);
-        return inertia('news/detail', compact('data'));
+        return inertia('news/Detail', compact('data'));
     }
 }

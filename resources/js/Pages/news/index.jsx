@@ -17,7 +17,7 @@ const News = props => {
           data.map(news => {
             return (
               <Link
-                as="div"
+                as="a"
                 href={'/news/' + news.slug}
                 key={news.id}
                 className="flex flex-col mb-12 cursor-pointer md:flex-row"

@@ -26,7 +26,7 @@ class AddNewsRequest extends FormRequest
         return [
             'title' => 'required|min:5|max:250',
             'body' => 'required|min:10',
-            'image' => 'required|file|mimetypes:image/webp|max:500'
+            'image' => 'required|file|mimetypes:image/webp|max:1024'
         ];
     }
 }
