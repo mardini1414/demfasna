@@ -21,15 +21,15 @@ const Footer = () => {
               <ul className="text-light">
                 <li className="mb-4">
                   <a
-                    href="https://www.instagram.com/demfasna/"
+                    href="https://instagram.com/demfasna?igshid=Yzg5MTU1MDY="
                     className="font-light hover:underline text-light/90"
                   >
-                    Instagran
+                    Instagram
                   </a>
                 </li>
                 <li>
                   <a
-                    href="https://discord.gg/4eeurUVvTy"
+                    href="https:/youtube.com/@demfasna"
                     className="font-light hover:underline text-light/90"
                   >
                     Youtube
@@ -63,10 +63,13 @@ const Footer = () => {
             <span className="text-sm sm:text-center">© 2022 DEMFASNA™</span>
           </div>
           <div className="space-x-5 text-xl">
-            <a href="https://www.instagram.com/demfasna/" className="hover:text-light/70">
+            <a
+              href="https:/instagram.com/demfasna?igshid=Yzg5MTU1MDY="
+              className="hover:text-light/70"
+            >
               <i className="fa-brands fa-instagram"></i>
             </a>
-            <a href="#" className="hover:text-light/70">
+            <a href="https:/www.youtube.com/@demfasna" className="hover:text-light/70">
               <i className="fa-brands fa-youtube"></i>
             </a>
           </div>

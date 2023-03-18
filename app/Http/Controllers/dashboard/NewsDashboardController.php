@@ -37,7 +37,7 @@ class NewsDashboardController extends Controller
     public function show($slug)
     {
         $news = $this->newsService->show($slug);
-        return inertia('dashboard/news/EditNews', compact('news'));
+        return inertia('dashboard/news/editNews', compact('news'));
     }
 
     public function update(EditNewsRequest $request, $slug)

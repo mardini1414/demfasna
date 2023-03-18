@@ -17,7 +17,7 @@ const AboutUsSection = () => {
             DEMFASNA
           </h2>
           <p className="leading-relaxed text-justify lg:text-start text-primary/80">
-            Dididikan di Yogyakarta pada tanggal 11 April 2021 yang bertepatan dengan 28 Sya'ban
+            Didirikan di Yogyakarta pada tanggal 11 April 2021 yang bertepatan dengan 28 Sya'ban
             1442 H, dan berpusat di Ibukota Negara Republik Indonesia
           </p>
           <Link href="/profile" className="block mx-auto lg:mx-0 w-max">

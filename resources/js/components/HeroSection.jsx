@@ -1,6 +1,7 @@
 import { Link } from '@inertiajs/inertia-react';
 import React from 'react';
 import heroImage from '../../assets/img/heroImage.webp';
+import hero from '../../assets/img/hero.png';
 
 const HeroSection = () => {
   return (
@@ -24,7 +25,7 @@ const HeroSection = () => {
           </Link>
         </div>
         <div className="w-2/3">
-          <img src={heroImage} className="w-full" alt="hero" />
+          <img src={hero} className="w-full" alt="hero" />
         </div>
       </div>
     </div>
